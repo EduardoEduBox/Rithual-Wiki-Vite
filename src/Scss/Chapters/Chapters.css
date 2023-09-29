@@ -1,0 +1,87 @@
+#chapters {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#chapters * {
+  transition: 200ms;
+}
+#chapters #chaptersTitle {
+  font-size: 4.8vw;
+  margin-bottom: 1vh;
+  color: rgb(255, 223, 239);
+  padding-left: 8vw;
+}
+#chapters .backgroundText {
+  padding-left: 8vw;
+  position: absolute;
+  margin-top: -63vh;
+  margin-left: -5vw;
+  font-size: 9vw;
+  color: rgb(18, 18, 18);
+  text-shadow: 2px 0 rgb(255, 223, 239), -2px 0 rgb(255, 223, 239), 0 2px rgb(255, 223, 239), 0 -2px rgb(255, 223, 239), 1px 1px rgb(255, 223, 239), -1px -1px rgb(255, 223, 239), 1px -1px #fff, -1px 1px rgb(255, 223, 239);
+  opacity: 15%;
+  z-index: -1;
+}
+#chapters #chaptersContainer {
+  display: flex;
+  gap: 5vh;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 65%;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-right: 10vw;
+}
+#chapters #chaptersContainer img {
+  position: relative;
+  left: 8vw;
+  height: calc(60% + 12vw);
+  border-radius: 1vh;
+  transition: 500ms;
+  margin-top: 2vh;
+  justify-content: flex-end;
+}
+#chapters #chaptersContainer img:hover {
+  transform: translateY(-2vh);
+}
+
+.tooltip {
+  font-size: 1.2rem;
+  position: absolute;
+  display: flex;
+  border-radius: 1rem;
+  background-color: rgb(15, 15, 15);
+  gap: 3rem;
+  align-items: center;
+  padding: 0.8rem 0.3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 998;
+  /* Add more styles as needed */
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.tooltip img {
+  border-radius: 1.5rem 1rem 1rem 1.5rem;
+  padding-left: 0.8rem;
+  height: 270px;
+}
+.tooltip .tooltipInformation {
+  display: flex;
+  padding-right: 3rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tooltip .tooltipInformation hr {
+  position: relative;
+  top: -1rem;
+  opacity: 30%;
+}
+.tooltip .tooltipInformation p {
+  position: relative;
+  top: -2rem;
+}/*# sourceMappingURL=Chapters.css.map */

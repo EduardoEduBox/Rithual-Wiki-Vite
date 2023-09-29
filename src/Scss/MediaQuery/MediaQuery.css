@@ -1,0 +1,348 @@
+@media (max-width: 1279px) {
+  body {
+    font-size: 1rem;
+    background-color: rgb(28, 28, 28);
+  }
+  body * {
+    transition: none;
+  }
+  body button {
+    height: 45px;
+    width: 140px;
+  }
+  nav {
+    padding: 0 3vw 0 3vw;
+  }
+  nav * {
+    transition: 500ms;
+  }
+  nav #navLogo {
+    height: 70%;
+  }
+  nav #menuIcon {
+    display: block;
+    cursor: pointer;
+    height: 75%;
+    width: auto;
+  }
+  nav div h1 {
+    font-size: 2rem;
+    bottom: auto;
+  }
+  nav ul {
+    display: none;
+  }
+  .navMediaQuery {
+    background-color: rgb(187, 83, 135);
+    opacity: 83%;
+    position: fixed;
+    right: calc(-188px - 1.5rem);
+    top: 3.9rem;
+    height: calc(100% - 3.9rem);
+    z-index: 999;
+    text-align: right;
+    padding-right: 2vw;
+    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navMediaQuery .navList2 {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    margin-top: 5vh;
+    font-size: 1.2rem;
+  }
+  .navMediaQuery .navList2::before {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent, rgb(98, 44, 71));
+    left: -1.5rem;
+    top: 0;
+  }
+  .navMediaQuery .navList2 li {
+    transition: 0.3s;
+  }
+  .navMediaQuery .navList2 li::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    opacity: 70%;
+    transition: width 0.3s ease-in-out;
+  }
+  .navMediaQuery .navList2 li:hover::before {
+    width: 100%;
+    opacity: 70%;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+  }
+  .navMediaQuery .navList2 li:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  .navMediaQuery .navList2 li hr {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+  }
+  header {
+    height: 100vh;
+    flex-direction: column;
+  }
+  header * {
+    transition: 500ms;
+  }
+  header #headerInformationContainer {
+    padding: 7vh 5vw 10vh 5vw;
+    width: 100%;
+  }
+  header #headerInformationContainer .headerTitle {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-top: 6vh;
+  }
+  header #headerInformationContainer .paragraphContainer {
+    margin: 0;
+  }
+  header #headerInformationContainer .paragraphContainer .headerParagraph {
+    font-size: 1.15rem;
+    margin: 0;
+    text-align: center !important;
+  }
+  header #headerInformationContainer .paragraphContainer .headerParagraph::before {
+    width: calc(100% - 1rem);
+  }
+  header #headerInformationContainer .headerKnowMore {
+    font-size: 1.35rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  header #headerImageContainer {
+    display: none;
+  }
+  #characters {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 1rem;
+  }
+  #characters ::-webkit-scrollbar {
+    width: 0vh;
+    height: 0.8vh;
+    display: none;
+  }
+  #characters .mobileTitleContainer {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #characters .mobileTitleContainer #charactersTitle {
+    font-size: 2rem;
+  }
+  #characters .mobileTitleContainer .backgroundText {
+    font-size: 3.8rem;
+    top: 2.5rem;
+    text-shadow: 1px 0 rgb(255, 223, 239), 0px 0 rgb(255, 223, 239), 0 0px rgb(255, 223, 239), 0 -1px rgb(255, 223, 239), 1px 0px rgb(255, 223, 239), 0px 0px rgb(255, 223, 239), -1px -1px #fff, -1px 1px rgb(255, 223, 239);
+  }
+  #characters #charactersContainer {
+    padding: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-top: 0;
+    align-items: flex-end;
+  }
+  #characters #charactersContainer .character-info {
+    display: none;
+  }
+  #characters #charactersContainer .character-info .character-image {
+    width: 100vw;
+    max-width: 450px;
+  }
+  #characters #charactersContainer .character-info #informationContainer #characterBackgroundText {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    left: 0;
+    font-size: 4.5rem;
+    margin: 0;
+  }
+  #characters #charactersContainer .character-info #informationContainer #informationOrganizator {
+    right: 0;
+    height: 100%;
+  }
+  #characters #charactersContainer .character-info #informationContainer #informationOrganizator #age {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 30vw 3vw 0 0;
+    width: 100%;
+    align-items: end;
+    justify-content: start;
+  }
+  #characters #charactersContainer .character-info #informationContainer #informationOrganizator #age div {
+    right: 0;
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+  #characters #charactersContainer .character-info #close-button img {
+    height: 1.5rem;
+    width: 3.5rem;
+  }
+  #characters #charactersContainer .character {
+    justify-content: space-between;
+    align-items: end;
+    scroll-snap-align: start;
+  }
+  #characters #charactersContainer .character #characterSinger {
+    width: 100vw;
+    height: auto;
+    max-width: 33rem;
+  }
+  #characters #charactersContainer .character #characterAika {
+    width: 95vw;
+    margin-left: 2.5vw;
+    height: auto;
+    max-width: 33rem;
+  }
+  #characters #charactersContainer .character #characterMadger {
+    width: 95vw;
+    margin-left: 2.5vw;
+    height: auto;
+    max-width: 33rem;
+  }
+  #characters #charactersContainer .character #characterSan {
+    width: 100vw;
+    height: auto;
+    max-width: 33rem;
+  }
+  #characters .imageAndInformation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  #characters .imageAndInformation .profilePictureDiv img {
+    width: 40vw;
+    height: auto;
+    border-radius: 50vh;
+  }
+  #characters .imageAndInformation #characterInformation {
+    padding-right: 2vw;
+    text-align: center;
+  }
+  .singerContainer {
+    width: 100vw !important;
+  }
+  .aikaContainer {
+    width: 100vw !important;
+  }
+  .madgerContainer {
+    width: 100vw !important;
+  }
+  .sanContainer {
+    width: 100vw !important;
+  }
+  #chapters {
+    height: 80vh;
+    padding: 0;
+    align-items: center;
+    margin-bottom: -10vh;
+  }
+  #chapters * {
+    transition: 500ms;
+  }
+  #chapters ::-webkit-scrollbar {
+    width: 0vh;
+    height: 1vh;
+  }
+  #chapters #chaptersTitle {
+    font-size: 2rem;
+    padding: 0;
+  }
+  #chapters .backgroundText {
+    font-size: 4rem;
+    margin-top: -48vh;
+    padding: 0;
+    text-shadow: 1px 0 rgb(255, 223, 239), 0px 0 rgb(255, 223, 239), 0 0px rgb(255, 223, 239), 0 -1px rgb(255, 223, 239), 1px 0px rgb(255, 223, 239), 0px 0px rgb(255, 223, 239), -1px -1px #fff, -1px 1px rgb(255, 223, 239);
+    right: auto;
+    left: auto;
+  }
+  #chapters #chaptersContainer {
+    height: 60%;
+    padding: 0 20vw 0 10vw;
+    position: relative;
+    gap: 1.5rem;
+  }
+  #chapters #chaptersContainer img {
+    height: 94%;
+  }
+  .triggered {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    height: 75vw;
+    width: 100%;
+  }
+  .triggered hr {
+    opacity: 50%;
+  }
+  .triggered .toolTipMobileContainer {
+    display: flex;
+    height: 100%;
+    position: relative;
+    top: 2rem;
+  }
+  .triggered .toolTipMobileContainer .toolTipMobileImageContainer {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .triggered .toolTipMobileContainer .toolTipMobileImageContainer .ToolTipMobileChapterImage {
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .triggered .toolTipMobileContainer .toolTipMobileInformationContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+  }
+  .triggered .toolTipMobileContainer .toolTipMobileInformationContainer .xMark {
+    position: absolute;
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 1.7rem;
+    top: -2rem;
+    right: 5vw;
+    opacity: 50%;
+  }
+  .triggered .toolTipMobileContainer .toolTipMobileInformationContainer .toolTipTitle {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    color: rgb(255, 223, 239);
+  }
+  .triggered .toolTipMobileContainer .toolTipMobileInformationContainer .toolTipDescription {
+    padding: 0 2vw;
+    margin-top: 0;
+  }
+  footer {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}/*# sourceMappingURL=MediaQuery.css.map */

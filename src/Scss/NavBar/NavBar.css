@@ -1,0 +1,79 @@
+nav {
+  display: flex;
+  width: 100%;
+  height: 3.9rem;
+  background-color: rgb(187, 83, 135);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw 0 10vw;
+  position: fixed;
+  opacity: 90%;
+  z-index: 999;
+}
+nav::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5rem;
+  background-image: linear-gradient(to top, transparent, rgb(98, 44, 71));
+  bottom: -1.5rem;
+  left: 0;
+  right: 0;
+}
+nav #navLogo {
+  height: 80%;
+  width: auto;
+  border-radius: 0.5rem;
+  border: solid rgb(255, 223, 239) 2px;
+}
+nav div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+nav div h1 {
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: -38%;
+}
+nav #menuIcon {
+  display: none;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.5rem;
+  gap: 2vw;
+  cursor: pointer;
+}
+nav ul li {
+  position: relative;
+  transition: all 0.3s ease;
+}
+nav ul li::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  opacity: 70%;
+  transition: width 0.3s ease-in-out;
+}
+nav ul li:hover::before {
+  width: 100%;
+  opacity: 70%;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+}
+nav ul li:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}/*# sourceMappingURL=NavBar.css.map */

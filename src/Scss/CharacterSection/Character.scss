@@ -1,0 +1,220 @@
+$light-pink-color: rgb(255, 223, 239);
+$text-shadow: drop-shadow(0px 0px 10px rgb(0, 0, 0));
+
+#characters {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 10vh;
+
+  * {
+    transition: none !important;
+  }
+
+  #characterBackgroundSidewaysBar {
+    position: absolute;
+    width: 200%;
+    height: 52vh;
+    transform: rotate(8deg);
+    background-color: darkgrey;
+    z-index: -1;
+    top: 44%;
+    opacity: 20%;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 200%;
+      height: 42vh;
+      background-color: rgb(18, 18, 18);
+      bottom: 6rem;
+      transform: rotate(-9.5deg);
+    }
+  }
+
+  #charactersTitle {
+    font-size: 4.8vw;
+    margin-bottom: 1vh;
+    margin-top: 0;
+    color: rgb(255, 223, 239);
+  }
+
+  .backgroundText {
+    top: -2.5rem;
+    position: absolute;
+    font-size: 9vw;
+    color: rgb(18, 18, 18);
+    text-shadow: 2px 0 rgb(255, 223, 239), -2px 0 rgb(255, 223, 239),
+      0 2px rgb(255, 223, 239), 0 -2px rgb(255, 223, 239),
+      1px 1px rgb(255, 223, 239), -1px -1px rgb(255, 223, 239), 1px -1px,
+      -1px 1px rgb(255, 223, 239);
+    opacity: 15%;
+    z-index: -1;
+  }
+
+  #charactersContainer {
+    width: 100%;
+    height: calc(100% - 9vw);
+    display: flex;
+    padding: 0 5vw;
+    margin-top: 3rem;
+
+    .character {
+      height: 100%;
+      width: 25%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+    }
+
+    div {
+      .profilePictureDiv {
+        width: 35vh;
+        height: 35vh;
+        border-radius: 50vh;
+        position: absolute;
+        left: -3rem;
+        top: -2.5rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50vh;
+          translate: none;
+          rotate: none;
+          scale: none;
+          opacity: 1;
+          transform: translate(0px, 0px);
+          height: 100%;
+        }
+      }
+
+      #informationContainer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        #characterBackgroundText {
+          position: absolute;
+          top: 10%;
+          font-size: 9vw;
+          z-index: -1;
+          white-space: nowrap;
+          translate: none;
+          rotate: none;
+          scale: none;
+          opacity: 1;
+          // transform: translate(-150px, 0px);
+          transform: translate(0px, 0px);
+        }
+
+        #informationOrganizator {
+          width: 66%;
+          position: absolute;
+          height: 50%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+
+          #characterInformation {
+            position: absolute;
+            top: 0;
+            left: 55%;
+            padding-left: 3vw;
+            z-index: -1;
+            text-align: center;
+            margin-top: 0;
+          }
+
+          #age {
+            width: 50%;
+            height: 100%;
+            // border: solid 1px lightgreen;
+            position: absolute;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 1vh 0;
+
+            div {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              gap: 0.8rem;
+              align-items: center;
+
+              span {
+                font-weight: 1000;
+              }
+            }
+
+            * {
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      #close-button {
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        cursor: pointer;
+
+        img {
+          height: 2rem;
+          width: 5rem;
+          opacity: 100%;
+          &:hover {
+            content: url("../../assets/icons/pngwing.com (2).png");
+          }
+        }
+      }
+
+      img {
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      #characterAika {
+        height: 95%;
+      }
+
+      #characterMadger {
+        height: 95%;
+      }
+
+      #characterSan {
+        height: 99%;
+      }
+    }
+  }
+}
+
+.mainImageContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.character-info {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+
+  .character-image {
+    transform: translate(150px, 0px);
+  }
+}
