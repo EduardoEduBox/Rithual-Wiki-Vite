@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="Css/assets/icons/openedEye.png"
+      href="public/Icons/openedEye.png"
       type="image/x-icon"
     />
     <!-- css vvvvvvvv -->
@@ -28,14 +28,14 @@
   </head>
   <body>
     <nav>
-      <img src="Css/assets/logo .png" alt="" id="navLogo" />
+      <img src="public/Icons/rithualLogo.png" alt="" id="navLogo" />
       <div><h1>(૨¡Ƭષαℓ</h1></div>
-      <img src="Css/assets/icons/openedEye.png" alt="" id="menuIcon" />
+      <img src="public/Icons/openedEye.png" alt="" id="menuIcon" />
       <ul class="navList">
         <li><a href="#header">Home</a></li>
         <li><a href="#characters">Personagens</a></li>
         <li><a href="#chapters">Capítulos</a></li>
-        <li>Sobre mim</li>
+        <li class="readNow">Ler agora</li>
       </ul>
     </nav>
 
@@ -92,21 +92,17 @@
                       <h3 id="characterAge"></h3>
                       <span class="ageColor"></span>
                     </div>
-                    <!-- <div>
-                      <h3 id="characterStyle"></h3>
-                      <span class="styleColor"></span>
-                    </div> -->
                   </div>
                 </div>
               </div>
               <span id="close-button">
-                <img src="Css/assets/icons/293657_x_icon (1).png" alt="" />
+                <img src="public/Icons/blackXmark.png" alt="close button" />
               </span>
             </div>
 
             <div class="singerContainer character">
               <img
-                src="Css/assets/charactersSection/Singer corpo completo.png"
+                src="public/CharacterSection/withText/Singer corpo completo.png"
                 alt="Imagem do Singer"
                 id="characterSinger"
                 class="character-image"
@@ -114,7 +110,7 @@
             </div>
             <div class="aikaContainer character">
               <img
-                src="Css/assets/charactersSection/Aika corpo completo.png"
+                src="public/CharacterSection/withText/Aika corpo completo.png"
                 alt="Imagem da Aika"
                 id="characterAika"
                 class="character-image"
@@ -122,7 +118,7 @@
             </div>
             <div class="madgerContainer character">
               <img
-                src="Css/assets/charactersSection/Madger corpo completo.png"
+                src="public/CharacterSection/withText/Madger corpo completo.png"
                 alt="Imagem do Madger"
                 id="characterMadger"
                 class="character-image"
@@ -130,7 +126,7 @@
             </div>
             <div class="sanContainer character">
               <img
-                src="Css/assets/charactersSection/San corpo completo.png"
+                src="public/CharacterSection/withText/San corpo completo.png"
                 alt="Imagem do San Majutsu-shi"
                 id="characterSan"
                 class="character-image"
@@ -147,31 +143,31 @@
         <div id="chaptersContainer">
           <a href="https://tapas.io/episode/2307820"
             ><img
-              src="Css/assets/chapters/rithual pré pagina cap 0.png"
+              src="public/ChapterSection/prePages/Rithual pré pagina cap 0.png"
               alt="Imagem do capítulo zero"
               class="prePages"
           /></a>
           <a href="https://tapas.io/episode/2478257 "
             ><img
-              src="Css/assets/chapters/ritual pré pagina cap 1.png"
+              src="public/ChapterSection/prePages/Rithual pré pagina cap 1.png"
               alt="Imagem do capítulo zero"
               class="prePages"
           /></a>
           <a href="https://tapas.io/episode/2571907"
             ><img
-              src="Css/assets/chapters/ritual pré pagina cap 2.png"
+              src="public/ChapterSection/prePages/Rithual pré pagina cap 2.png"
               alt="Imagem do capítulo zero"
               class="prePages"
           /></a>
           <a href="https://tapas.io/episode/2689791"
             ><img
-              src="Css/assets/chapters/ritual pré pagina cap 3.png"
+              src="public/ChapterSection/prePages/Rithual pré pagina cap 3.png"
               alt="Imagem do capítulo zero"
               class="prePages"
           /></a>
           <a href="https://tapas.io/episode/2846137"
             ><img
-              src="Css/assets/chapters/ritual pré pagina cap 4.png"
+              src="public/ChapterSection/prePages/Rithual pré pagina cap 4.png"
               alt="Imagem do capítulo zero"
               class="prePages"
           /></a>
@@ -229,6 +225,34 @@
       </p>
     </footer>
 
-    <script type="module" src="src/Logic/NavBar.ts"></script>
+    <div id="loading-screen">
+      <div class="loading-spinner"></div>
+      <p>Carregando...</p>
+    </div>
+
+    <script>
+      console.time() & console.timeEnd();
+
+      window.addEventListener("load", () => {
+        const loadingScreen = document.getElementById("loading-screen");
+
+        loadingScreen.style.display = "none";
+
+        const bodyWidth = document.body.offsetWidth;
+        const htmlWidth = document.documentElement.offsetWidth;
+
+        const container = document.querySelector("#chaptersContainer");
+
+        // this code is to set the scrollBar to a specific value when you load the page, for both mobile and desktop
+
+        if (bodyWidth >= 1279 || htmlWidth >= 1279) container.scrollLeft = 88;
+        else container.scrollLeft = 55;
+      });
+    </script>
+
+    <script type="module" src="src/Ts/NavBar.ts"></script>
+    <script type="module" src="src/Ts/Header.ts"></script>
+    <script type="module" src="src/Ts/CharacterSection.ts"></script>
+    <script type="module" src="src/Ts/ChapterSection.ts"></script>
   </body>
 </html>

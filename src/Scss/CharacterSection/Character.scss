@@ -172,8 +172,9 @@ $text-shadow: drop-shadow(0px 0px 10px rgb(0, 0, 0));
           height: 2rem;
           width: 5rem;
           opacity: 100%;
+
           &:hover {
-            content: url("../../assets/icons/pngwing.com (2).png");
+            content: url("../../../public/Icons/redXmark.png");
           }
         }
       }

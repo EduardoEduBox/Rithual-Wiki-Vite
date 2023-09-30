@@ -150,7 +150,7 @@
   opacity: 100%;
 }
 #characters #charactersContainer div #close-button img:hover {
-  content: url("../../assets/icons/pngwing.com (2).png");
+  content: url("../../../public/Icons/redXmark.png");
 }
 #characters #charactersContainer div img {
   width: auto;
